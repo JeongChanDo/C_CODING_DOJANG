@@ -28,18 +28,18 @@ bfReserved2 - 2 - 예약된 공간. 사용 x
 bfOffBits   - 4 - 비트맵 데이터 시작 위치  
 
 ## 비트맵 정보 헤더 구조
-		맴버	크기(바이트)		설명  
-biSize				4		현재 비트맵 정보 헤더의 크기  
-biWidth				4		비트맵 가로 크기(픽셀)  
-biHeight			4		비트맵 세로 크기(픽셀)  
-biPlanes			2		사용하는 색상 판 수. 항상 1  
-bitBitCount			2		픽셀 하나를 표현하는 비트 수   
-biCompression		4		압축 방식. 보통 비트맵은 압축 안하므로 0  
-biSizeImage			4		비트맵 이미지의 픽셀 데이터 크기(압축안된크기)  
-biXPelsPerMeter		4		가로 해상도(미터당 픽셀)  
-biYPelsPerMeter		4		세로 해상도(미터당 픽셀)  
-biClrUsed			4		색상 테이블에서 실제 사용하는 색상수  
-biClrImportant		4		비트맵을 표현하기위해 필요한 색상 인덱스 수  
+|---맴버----|---크기(바이트)---|---설명---|  
+|biSize			|4|현재 비트맵 정보 헤더의 크기||  
+|biWidth		|4|비트맵 가로 크기(픽셀)|
+|biHeight		|4|비트맵 세로 크기(픽셀)|
+|biPlanes		|2|사용하는 색상 판 수. 항상 1|
+|bitBitCount	|2|픽셀 하나를 표현하는 비트 수 |
+|biCompression	|4|압축 방식. 보통 비트맵은 압축 안하므로 0|
+|biSizeImage	|4|비트맵 이미지의 픽셀 데이터 크기(압축안된크기)|
+|biXPelsPerMeter|4|가로 해상도(미터당 픽셀)|  
+|biYPelsPerMeter|4|세로 해상도(미터당 픽셀)|
+|biClrUsed		|4|색상 테이블에서 실제 사용하는 색상수|
+|biClrImportant	|4|	비트맵을 표현하기위해 필요한 색상 인덱스 수|  
 * 24비트 피브맵은 픽셀을 BGR 순으로 저장하며 각 생상 크기는 1바이트. 즉, 픽셀당 3바이트 사용  
 * 색상이 파, 초, 빨 3색이라 RGBTRIPLE 구조체의 이름에 triple이 들어갑니다.  
 * 구조체 맴버에서 rgb 뒤에 붙는 t도 triple을 의미함.  
