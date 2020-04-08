@@ -64,3 +64,106 @@ bfOffBits   - 4 - 비트맵 데이터 시작 위치
 13. 10-12 가로X세로 크기만큼 반복
 14. 텍스트 파일 닫기
 
+
+
+
+## task 설정
+- task.json 에서 자주 사용하는 명령 등록
+- 
+{
+    "version": "2.0.0",
+    "runner": "terminal",
+    "type": "shell",
+    "echoCommand": true,
+    "presentation" : { "reveal": "always" },
+    "tasks": [
+          //C++ 컴파일
+          {
+            "label": "save and compile for C++",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-std=c++11",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "group": "build",
+
+            //컴파일시 에러를 편집기에 반영
+            //참고:   https://code.visualstudio.com/docs/editor/tasks#_defining-a-problem-matcher
+
+            "problemMatcher": {
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    // The regular expression. 
+                   //Example to match: helloWorld.c:5:3: warning: implicit declaration of function 'prinft'
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        // 바이너리 실행(Ubuntu)
+
+        {
+
+            "label": "execute",
+
+            "command": "cd ${fileDirname} && ./${fileBasenameNoExtension}",
+
+            "group": "test"
+
+        }
+	]
+}
+
+https://ldgeao99.tistory.com/203
+
+## 디버깅 설정
+- launch.json
+{
+    // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+    // 기존 특성에 대한 설명을 보려면 가리킵니다.
+    // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb"
+        }
+    ]
+}
+
+https://ldgeao99.tistory.com/203
+
+
+## vscode task.json 변수 치환
+
+When authoring tasks configurations, it is often useful to have a set of predefined common variables. VS Code supports variable substitution inside strings in the tasks.json file and has the following predefined variables:
+
+${workspaceFolder} the path of the workspace folder that contains the tasks.json file
+${workspaceFolderBasename} the name of the workspace folder that contains the tasks.json file without any slashes (/)
+${file} the current opened file
+${relativeFile} the current opened file relative to the workspace * folder containing the file
+${fileBasename} the current opened file's basename
+${fileBasenameNoExtension} the current opened file's basename without the extension
+${fileDirname} the current opened file's dirname
+${fileExtname} the current opened file's extension
+${cwd} the task runner's current working directory on startup
+${lineNumber} the current selected line number in the active file
+
+https://cartiertk.tistory.com/52
