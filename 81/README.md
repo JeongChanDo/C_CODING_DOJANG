@@ -112,13 +112,9 @@ bfOffBits   - 4 - 비트맵 데이터 시작 위치
         // 바이너리 실행(Ubuntu)
 
         {
-
             "label": "execute",
-
             "command": "cd ${fileDirname} && ./${fileBasenameNoExtension}",
-
             "group": "test"
-
         }
 	]
 }
