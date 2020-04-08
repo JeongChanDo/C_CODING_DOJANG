@@ -50,7 +50,7 @@ int main()
 	// 배열의 낮은 인덱스에 획이 많은 문자 배치. 높은 인덱스에 획이 적은 문자 배치. 가장 큰 인덱스에는 공백
 	char ascii[] = {'#', '#', '@', '%', '=', '+', '*', ':', '-', '.', ' '};
 
-	fpBmp = fopen("Peppers80x80.bmp", "rb");
+	fpBmp = fopen("baboon.bmp", "rb");
 	if (fpBmp == NULL)
 		return 0;
 	if (fread(&fileHeader, sizeof(BITMAPINFOHEADER), 1, fpBmp) < 1)
