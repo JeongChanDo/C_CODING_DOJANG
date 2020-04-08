@@ -156,15 +156,15 @@ https://ldgeao99.tistory.com/203
 
 When authoring tasks configurations, it is often useful to have a set of predefined common variables. VS Code supports variable substitution inside strings in the tasks.json file and has the following predefined variables:  
 
-${workspaceFolder} the path of the workspace folder that contains the tasks.json file  
-${workspaceFolderBasename} the name of the workspace folder that contains the tasks.json file without any slashes (/)  
-${file} the current opened file  
-${relativeFile} the current opened file relative to the workspace * folder containing the file  
-${fileBasename} the current opened file's basename  
-${fileBasenameNoExtension} the current opened file's basename without the extension  
-${fileDirname} the current opened file's dirname  
-${fileExtname} the current opened file's extension  
-${cwd} the task runner's current working directory on startup  
-${lineNumber} the current selected line number in the active file  
+- ${workspaceFolder} the path of the workspace folder that contains the tasks.json file  
+- ${workspaceFolderBasename} the name of the workspace folder that contains the tasks.json file without any slashes (/)  
+- ${file} the current opened file  
+- ${relativeFile} the current opened file relative to the workspace * folder containing the file  
+- ${fileBasename} the current opened file's basename  
+- ${fileBasenameNoExtension} the current opened file's basename without the extension  
+- ${fileDirname} the current opened file's dirname  
+- ${fileExtname} the current opened file's extension  
+- ${cwd} the task runner's current working directory on startup  
+- ${lineNumber} the current selected line number in the active file  
 
 https://cartiertk.tistory.com/52
