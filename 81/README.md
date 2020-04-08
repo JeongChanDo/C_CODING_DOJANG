@@ -69,7 +69,7 @@ bfOffBits   - 4 - 비트맵 데이터 시작 위치
 
 ## task 설정
 - task.json 에서 자주 사용하는 명령 등록
-- 
+```{.json}
 {
     "version": "2.0.0",
     "runner": "terminal",
@@ -122,11 +122,12 @@ bfOffBits   - 4 - 비트맵 데이터 시작 위치
         }
 	]
 }
-
+```
 https://ldgeao99.tistory.com/203
 
 ## 디버깅 설정
 - launch.json
+```{.json}
 {
     // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
     // 기존 특성에 대한 설명을 보려면 가리킵니다.
@@ -147,23 +148,23 @@ https://ldgeao99.tistory.com/203
         }
     ]
 }
-
+```
 https://ldgeao99.tistory.com/203
 
 
 ## vscode task.json 변수 치환
 
-When authoring tasks configurations, it is often useful to have a set of predefined common variables. VS Code supports variable substitution inside strings in the tasks.json file and has the following predefined variables:
+When authoring tasks configurations, it is often useful to have a set of predefined common variables. VS Code supports variable substitution inside strings in the tasks.json file and has the following predefined variables:  
 
-${workspaceFolder} the path of the workspace folder that contains the tasks.json file
-${workspaceFolderBasename} the name of the workspace folder that contains the tasks.json file without any slashes (/)
-${file} the current opened file
-${relativeFile} the current opened file relative to the workspace * folder containing the file
-${fileBasename} the current opened file's basename
-${fileBasenameNoExtension} the current opened file's basename without the extension
-${fileDirname} the current opened file's dirname
-${fileExtname} the current opened file's extension
-${cwd} the task runner's current working directory on startup
-${lineNumber} the current selected line number in the active file
+${workspaceFolder} the path of the workspace folder that contains the tasks.json file  
+${workspaceFolderBasename} the name of the workspace folder that contains the tasks.json file without any slashes (/)  
+${file} the current opened file  
+${relativeFile} the current opened file relative to the workspace * folder containing the file  
+${fileBasename} the current opened file's basename  
+${fileBasenameNoExtension} the current opened file's basename without the extension  
+${fileDirname} the current opened file's dirname  
+${fileExtname} the current opened file's extension  
+${cwd} the task runner's current working directory on startup  
+${lineNumber} the current selected line number in the active file  
 
 https://cartiertk.tistory.com/52
