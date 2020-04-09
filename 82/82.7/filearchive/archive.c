@@ -31,7 +31,7 @@ PARCHIVE initialize()
 	}
 	else
 	{
-		if (feard(&archive->header, sizeof(ARCHIVE_HEADER),1 , fp) < 1)
+		if (fread(&archive->header, sizeof(ARCHIVE_HEADER),1 , fp) < 1)
 		{
 			printf("아카이브 헤더 읽기 실패 \n");
 			fclose(fp);

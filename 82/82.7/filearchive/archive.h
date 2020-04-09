@@ -2,6 +2,7 @@
 #define ARCHIVE_H
 
 #include <stdio.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>
 
@@ -37,4 +38,4 @@ PARCHIVE initilize();
 void finalize(PARCHIVE archive);
 bool isExist(PARCHIVE archive, char *filename);
 
-#endif;
+#endif

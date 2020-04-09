@@ -1,0 +1,30 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "echo",
+			"type": "shell",
+			"command": "echo Hello"
+		}
+		,
+		{
+			"label": "echo workspaceFoler",
+			"type": "shell",
+			"command": "echo ${workspaceFolder}"
+		}
+		,
+		{
+			"label" : "gcc",
+			"type":"shell",
+			"command":"gcc",
+			"args": [
+				"main.c",
+				"file.c",
+				"archive.c",
+				"command.c"
+			]
+		}
+	]
+}
