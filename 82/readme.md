@@ -55,7 +55,7 @@ typedef struct _ARCHIVE_HEADER {
 이번에는 파일 정보(file descriptor) 구조체 입니다. 파일 이름 문자열과 파일 크기, 파일 데이터의 위치가 들어갑니다. 여기서 파일 데이터의 위치는 아카이브 파일 안에서 해당 파일의 데이터가 있는 곳의 시작 위치를 저장하게 됩니다.
 
 ``` c
-typedef strcut _FILE_DESC {
+typedef struct _FILE_DESC {
    char     name[256];
    uint32_t size;
    uint32_t dataOffset;
